@@ -1,0 +1,18 @@
+{
+  "username": "claude",
+  "expires": 1749336866000,
+  "connections": {
+    "linux": {
+      "id": "linux",
+      "protocol": "rdp",
+      "parameters": {
+        "hostname": "rdesktop",
+        "username": "abc",
+        "port": 3389,
+        "disable-copy": false,
+        "password": "abc",
+        "ignore-cert": true
+      }
+    }
+  }
+}

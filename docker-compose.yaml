@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  guacd:
+    image: guacamole/guacd
+    container_name: guacd
+    platform: linux/amd64
+    restart: always
+
+  guacamole:
+    build: ./custom-guac
+    container_name: guacamole
+    restart: always
+    environment:
+      GUACD_HOSTNAME: guacd
+    depends_on:
+      - guacd
+    ports:
+      - "8080:8080"
+
+  rdesktop:
+    image: lscr.io/linuxserver/rdesktop:latest
+    container_name: rdesktop
+    security_opt:
+      - seccomp:unconfined #optional
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    shm_size: "1gb" #optional
+    restart: unless-stopped

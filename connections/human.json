@@ -1,0 +1,7 @@
+{
+  "username": "human",
+  "expires": 1749336866000,
+  "connections": {
+    "linux": { "join": "linux", "parameters": { "read-only": false } }
+  }
+}
