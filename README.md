@@ -78,7 +78,7 @@ It typically costs **$0.25 to $0.50 per minute**, as the computer use API sends 
 
 The [official Computer Use documentation](https://docs.anthropic.com/en/docs/build-with-claude/computer-use#computer-tool)
 states that screenshots should not be above XGA/WXGA since otherwise the LLM API is
-forced to resize the image to support LLM input constrainsts, which can lead to
+forced to resize the image to support LLM input constraints, which can lead to
 lower model accuracy and slower performance. This demo is configured to use XGA, which
 is 1024 x 768 pixels.
 
